@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/buttonConnect">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puerta de garaje:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/Garaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:enabled="true" />
+
+                <CheckBox
+                    android:id="@+id/GarajeSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor de sensor?" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Humedad de planta:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/Humedad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:enabled="true" />
+
+                <CheckBox
+                    android:id="@+id/HumedadSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor de agua?" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Foco de segundo piso:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:id="@+id/FocoSegundoPiso"
+                    android:min="0"
+                    android:max="255"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal|center_vertical"></SeekBar>
+
+                <CheckBox
+                    android:id="@+id/FocoSegundoPisoSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor  de \nfotoresistencia?" />
+            </GridLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Foco de primer piso:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:layout_width="150dp"
+                    android:id="@+id/FocoPrimerPiso"
+                    android:min="0"
+                    android:max="255"
+                    android:layout_gravity="fill_horizontal|center_vertical"
+                    android:layout_height="wrap_content"></SeekBar>
+
+                <CheckBox
+                    android:id="@+id/FocoPrimerPisoSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor  de \nfotoresistencia?"/>
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Foco de afuera de casa:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <SeekBar
+                    android:layout_width="150dp"
+                    android:id="@+id/FocoAfuera"
+                    android:layout_height="wrap_content"
+                    android:min="0"
+                    android:max="255"
+                    android:layout_gravity="fill_horizontal|center_vertical"></SeekBar>
+
+                <CheckBox
+                    android:id="@+id/FocoAfueraSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor  de \nfotoresistencia?"/>
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Ventilador de humo:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/Ventilador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal|center_vertical"
+                    android:enabled="true" />
+
+                <CheckBox
+                    android:id="@+id/VentiladorSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor de sensor \nde humo?" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Motor de ropa:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/Ropa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="fill_horizontal|center_vertical"
+                    android:enabled="true" />
+
+                <CheckBox
+                    android:id="@+id/RopaSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor de \nsensor de lluvia?" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Puerta de seguridad:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/PuertaSeguridad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:enabled="true" />
+
+                <CheckBox
+                    android:id="@+id/PuertaSeguridadSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar valor de lector?" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:text="Elevador:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="30dp">
+
+                <Button
+                    android:id="@+id/Elevador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Segunda planta" />
+
+                <Button
+                    android:id="@+id/ForzarParo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Forzar paro" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_marginTop="100px"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/background_light"
+        app:title="Casa Domotica"
+        app:titleTextColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conectarse"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
